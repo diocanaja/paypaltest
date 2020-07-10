@@ -5,11 +5,11 @@
 <script>
   paypal.Buttons({
       style: {
-          shape: 'pill',
+          shape: 'rect',
           color: 'gold',
-          layout: 'horizontal',
-          label: 'checkout',
-          tagline: true
+          layout: 'vertical',
+          label: 'paypal',
+          
       },
       createOrder: function(data, actions) {
           return actions.order.create({
