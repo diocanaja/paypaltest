@@ -26,6 +26,14 @@
   }).render('#paypal-button-container');
 </script>
 
-<html2>
-  < input type="file" id="files" name="files[]" multiple webkitdirectory="" directory=""/ >
-</html2>
+-->
+<!-- The `multiple` attribute lets users select multiple files. -->
+<input type="file" id="file-selector" multiple>
+<script>
+  const fileSelector = document.getElementById('file-selector');
+  fileSelector.addEventListener('change', (event) => {
+    const fileList = event.target.files;
+    console.log(fileList);
+  });
+</script>
+<--
