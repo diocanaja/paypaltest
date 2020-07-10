@@ -1,19 +1,21 @@
+<html>
+<h1>Test PayPal Payment</h1>
 <div id="paypal-button-container"></div>
 <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=EUR" data-sdk-integration-source="button-factory"></script>
 <script>
   paypal.Buttons({
       style: {
           shape: 'pill',
-          color: 'blue',
-          layout: 'vertical',
-          label: 'buynow',
-          
+          color: 'gold',
+          layout: 'horizontal',
+          label: 'checkout',
+          tagline: true
       },
       createOrder: function(data, actions) {
           return actions.order.create({
               purchase_units: [{
                   amount: {
-                      value: '149'
+                      value: '240'
                   }
               }]
           });
@@ -25,24 +27,4 @@
       }
   }).render('#paypal-button-container');
 </script>
-
--->
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><!--  JQUERY  -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-  </script>
-  <title></title>
-</head>
-<body>
-  <h1>Listing /</h1><!-- Custom Script (defered load, after dom ready) -->
-  <script>
-    $.getJSON('./', data => {
-        console.log(data); //["doc1.jpg", "doc2.jpg", "doc3.jpg"] 
-    });
-  </script>
-</body>
-<--
+</html>
